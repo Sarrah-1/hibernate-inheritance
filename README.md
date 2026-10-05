@@ -22,19 +22,18 @@ Une seule table `vehicules`, avec la colonne discriminante `type_vehicule`
 ![Schéma](screenshots/101.png)
 ![Insertions](screenshots/102.png)
 ![Résultats](screenshots/103.png)
-
+![Résultats](screenshots/104.png)
 ## 2. JOINED
 Une table `employes` pour les attributs communs, et une table par sous-classe
 (`developpeurs`, `managers`) liée par clé étrangère.
 
-![Schéma développeurs](screenshots/104.png)
+![Schéma développeurs](screenshots/105.png)
 
 ## 3. TABLE_PER_CLASS
 Une table par classe concrète (`livres`, `electroniques`), chacune avec toutes
 les colonnes héritées. Les identifiants viennent de `hibernate_sequence`
 (`GenerationType.AUTO`).
 
-![Schéma](screenshots/105.png)
 ![Insertions](screenshots/106.png)
 
 ## Exécution
