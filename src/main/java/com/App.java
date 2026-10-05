@@ -21,13 +21,13 @@ public class App {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate-inheritance");
 
         try {
-            System.out.println("\n=== Test de la stratégie SINGLE_TABLE ===");
+            System.out.println("\nTest de la stratégie SINGLE_TABLE");
             testSingleTable(emf);
 
-            System.out.println("\n=== Test de la stratégie JOINED ===");
+            System.out.println("\nTest de la stratégie JOINED");
             testJoined(emf);
 
-            System.out.println("\n=== Test de la stratégie TABLE_PER_CLASS ===");
+            System.out.println("\nTest de la stratégie TABLE_PER_CLASS");
             testTablePerClass(emf);
 
         } finally {
@@ -39,7 +39,7 @@ public class App {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            System.out.println("Création des véhicules...");
+            System.out.println("Création des véhicules");
 
             Voiture voiture1 = new Voiture("Renault", "Clio", LocalDate.of(2020, 5, 15), 15000.0, 5, true, "Essence");
             Voiture voiture2 = new Voiture("Peugeot", "308", LocalDate.of(2019, 3, 10), 18000.0, 5, true, "Diesel");
